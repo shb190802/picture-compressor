@@ -1,0 +1,26 @@
+{
+  "name": "picture-compressor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shb190802/picture-compressor.git"
+  },
+  "keywords": [
+    "img-compressor",
+    "javasript",
+    "vue",
+    "compress",
+    "picture-compressor"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shb190802/picture-compressor/issues"
+  },
+  "homepage": "https://github.com/shb190802/picture-compressor#readme"
+}
