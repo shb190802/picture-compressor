@@ -2,6 +2,11 @@
 
 前端图片压缩工具，使用canvas对图片做压缩处理。
 
+## 安装
+```
+npm install picture-compressor --save
+```
+
 ## 使用
 ```html
 <input id="upload" type="file" value="上传"/>
