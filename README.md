@@ -6,19 +6,12 @@
 返回的目标图片填充模式有两种
 * **scale** 等比例缩放，保证图片在设置的宽高之内完成显示
 
-<div style='height:100px;padding:10px;'>
-  <div style='width:200px;height:100px;border:solid 1px #000;line-height:100px;text-align:center;font-size:20px;margin-right:10px;display:inline-block;'>sourceImg</div>
-  <div style='width:100px;height:100px;border:solid 1px #000;line-height:100px;text-align:center;font-size:20px;margin-right:10px;display:inline-block;'>dist size</div>
-  <div style='width:100px;height:50px;border:solid 1px #000;line-height:50px;text-align:center;font-size:20px;margin-right:10px;display:inline-block;'>distImg</div>
-</div>
+![](https://suohb.com/images/scale.png)
 
 * **fill** 平铺显示，将图片尺寸设置为参数宽高，可能引起图片变形
 
-<div style='height:100px;padding:10px;'>
-  <div style='width:200px;height:100px;border:solid 1px #000;line-height:100px;text-align:center;font-size:20px;margin-right:10px;display:inline-block;'>sourceImg</div>
-  <div style='width:100px;height:100px;border:solid 1px #000;line-height:100px;text-align:center;font-size:20px;margin-right:10px;display:inline-block;'>dist size</div>
-  <div style='width:100px;height:100px;border:solid 1px #000;line-height:100px;text-align:center;font-size:20px;margin-right:10px;display:inline-block;'>distImg</div>
-</div>
+![](https://suohb.com/images/fill.png)
+
 
 ## 安装
 ```
