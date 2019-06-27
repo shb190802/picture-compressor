@@ -25,7 +25,7 @@ function pictureCompress(options) {
       reject(new Error('dist width or height need > 0'))
       return
     }
-    if(!/jpg|png|jpeg/.test(type)) {
+    if (!/jpg|png|jpeg/.test(type)) {
       reject(new Error('type need jpg or png!'))
       return
     }
