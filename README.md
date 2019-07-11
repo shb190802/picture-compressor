@@ -13,6 +13,10 @@
 
 ![](https://suohb.com/images/fill.png)
 
+### 支持图片旋转
+
+设置为 0 90 -90 180
+
 ## 安装
 
 ```
@@ -60,6 +64,7 @@ npm install picture-compressor --save
 | quality | Number | 生产图片质量                              | N        | 0.92   |
 | type    | String | 生成图片类型(jpg or png)                  | N        | jpg    |
 | fit     | String | 图片填充方式(scale:等比缩放 or fill:填充) | N        | scale  |
+| rotate  | Number | 图片旋转（0,90,-90,180）度                | N        | 0      |
 
 ## returns 返回值
 

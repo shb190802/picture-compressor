@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>测试</title>
+</head>
+
+<body>
+  <!-- 测试文件，去掉export Defalut -->
+  <input type="file" id="file" />
+  <script src="./index.js"></script>
+  <script>
+    rotate = 0
+    let files = document.getElementById('file')
+    files.addEventListener('change', () => {
+      let file = files.files[0]
+      let reads = new FileReader()
+      reads.readAsDataURL(file)
+      reads.onload = function () {
+        console.log(this)
+        pictureCompress({
+          img: this.result,
+          width: 400,
+          height: 400,
+          rotate: rotate
+        }).then(res => {
+          console.log(res.width, res.height)
+          var img = new Image()
+          img.src = res.img
+          document.body.appendChild(img)
+        })
+      }
+    })
+  </script>
+</body>
+
+</html>
