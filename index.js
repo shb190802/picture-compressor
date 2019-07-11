@@ -31,7 +31,7 @@ function pictureCompress(options) {
       reject(new Error('type need jpg or png!'))
       return
     }
-    if (rotate !== 90 || rotate !== -90 || rotate !== 0 || rotate !== 180) {
+    if (rotate !== 90 && rotate !== -90 && rotate !== 0 && rotate !== 180) {
       reject(new Error('rotate mast be 0 90 -90 180!'))
       return
     }
