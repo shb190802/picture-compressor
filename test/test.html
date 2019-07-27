@@ -9,9 +9,8 @@
 </head>
 
 <body>
-  <!-- 测试文件，去掉export Defalut -->
   <input type="file" id="file" />
-  <script src="./index.js"></script>
+  <script src="../dist/picture-compressor.js"></script>
   <script>
     rotate = 0
     let files = document.getElementById('file')
@@ -23,8 +22,8 @@
         console.log(this)
         pictureCompress({
           img: this.result,
-          width: 400,
-          height: 400,
+          width: 100,
+          height: 100,
           rotate: rotate
         }).then(res => {
           console.log(res.width, res.height)

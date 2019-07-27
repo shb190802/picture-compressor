@@ -15,7 +15,7 @@
 
 ### 支持图片旋转
 
-设置为 0 90 -90 180
+![](https://suohb.com/images/rotate.png)
 
 ## 安装
 
@@ -26,29 +26,62 @@ npm install picture-compressor --save
 ## 使用
 
 ```html
-<input id="upload" type="file" value="上传" />
+<template>
+  <div id="app">
+    <input ref="upload" type="file" value="上传" @change="fileUpload" />
+  </div>
+</template>
 <script>
   import pictureCompress from "picture-compressor"
+  export default {
+    name: "APP",
+    methods: {
+      fileUpload: function() {
+        var file = this.$refs["upload"].files[0]
+        var rotate = 90
+        var reads = new FileReader()
+        reads.readAsDataURL(file)
+        reads.onload = function() {
+          pictureCompress({
+            img: this.result,
+            width: 400,
+            height: 400,
+            rotate: rotate
+          }).then(res => {
+            var img = new Image()
+            img.src = res.img
+            document.body.appendChild(img)
+          })
+        }
+      }
+    }
+  }
+</script>
+```
 
-  var upload = document.getElementById("upload")
-  upload.addEventListener("change", () => {
-    let file = upload.files[0]
-    let fr = new FileReader()
-    fr.readAsDataURL(file)
-    fr.onload = function() {
+or
+
+```html
+<input type="file" id="file" />
+<script src="../dist/picture-compressor.js"></script>
+<script>
+  rotate = 0
+  var files = document.getElementById("file")
+  files.addEventListener("change", () => {
+    var file = files.files[0]
+    var reads = new FileReader()
+    reads.readAsDataURL(file)
+    reads.onload = function() {
       pictureCompress({
         img: this.result,
-        width: 640,
-        height: 640
+        width: 100,
+        height: 100,
+        rotate: rotate
+      }).then(res => {
+        var img = new Image()
+        img.src = res.img
+        document.body.appendChild(img)
       })
-        .then(res => {
-          console.log(res)
-          var img = new Image()
-          img.src = res.img
-        })
-        .catch(err => {
-          console.log(err)
-        })
     }
   })
 </script>

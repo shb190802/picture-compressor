@@ -1,10 +1,11 @@
 {
   "name": "picture-compressor",
-  "version": "1.0.7",
+  "version": "1.1.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/picture-compressor.es.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c rollup.config.js"
   },
   "repository": {
     "type": "git",
@@ -22,5 +23,11 @@
   "bugs": {
     "url": "https://github.com/shb190802/picture-compressor/issues"
   },
-  "homepage": "https://github.com/shb190802/picture-compressor#readme"
+  "homepage": "https://github.com/shb190802/picture-compressor#readme",
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "rollup": "^1.17.0",
+    "rollup-plugin-babel": "^4.3.3"
+  }
 }

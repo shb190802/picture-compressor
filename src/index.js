@@ -48,7 +48,8 @@ function pictureCompress(options) {
       }, fit)
       let imgData = compress(this, distSize.width, distSize.height, type, quality, rotate)
       resolve({
-        ...distSize,
+        width: distSize.width,
+        height: distSize.height,
         img: imgData
       })
     }
